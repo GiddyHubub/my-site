@@ -2,11 +2,26 @@ export default function Home() {
   return (
     <main>
       {<section className="text-gray-600 body-font">
+  <div className="w-full overflow-hidden">
+    <div className="w-full h-64 sm:h-80 lg:h-96 overflow-hidden">
+      <img alt="content" className="object-cover object-center h-full w-full" src="https://dummyimage.com/1200x500" />
+    </div>
+  </div>
+
+  <div className="w-full overflow-hidden">
+    <div className="w-full h-48 sm:h-64 lg:h-80 overflow-hidden">
+      <img alt="geodebg" className="object-cover object-center h-full w-full" src="/geodebg.jpg" />
+    </div>
+  </div>
+
+  <div className="flex justify-center px-5 py-24">
+    <div className="bg-white/50 rounded-lg p-8" style={{ maxWidth: '1000px', width: '100%' }}>
+      {/* Your content goes here */}
+    </div>
+  </div>
+
   <div className="container px-5 py-24 mx-auto flex flex-col">
-    <div className="lg:w-4/6 mx-auto">
-      <div className="rounded-lg h-64 overflow-hidden">
-        <img alt="content" className="object-cover object-center h-full w-full" src="https://dummyimage.com/1200x500" />
-      </div>
+    <div className="lg:w-4/6 mx-auto w-full">
       <div className="flex flex-col sm:flex-row mt-10">
         <div className="sm:w-1/3 text-center sm:pr-8 sm:py-8">
           <div className="w-20 h-20 rounded-full inline-flex items-center justify-center bg-gray-200 text-gray-400">
@@ -123,8 +138,7 @@ export default function Home() {
   </div>
   <div className="bg-gray-100">
     <div className="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
-      <p className="text-gray-500 text-sm text-center sm:text-left">© 2020 Tailblocks —
-        <a href="https://twitter.com/knyttneve" rel="noopener noreferrer" className="text-gray-600 ml-1" target="_blank">@knyttneve</a>
+      <p className="text-gray-500 text-sm text-center sm:text-left">© 2026 Healing Ka
       </p>
       <span className="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">
         <a className="text-gray-500">

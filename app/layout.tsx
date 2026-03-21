@@ -1,16 +1,11 @@
 import Navbar from '@/Components/Navbar';
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import localFont from 'next/font/local';
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const myNavbarFont = localFont({
+  src: '../public/fonts/AlikeAngular-Regular.ttf',
+  variable: '--font-navbar-custom', 
 });
 
 export const metadata: Metadata = {
@@ -26,12 +21,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-fixed bg-cover bg-center`}
-        style={{ backgroundImage: "url('/coffeestain paper.jpg')" }}>
-        <div className="min-h-screen bg-white/70 backdrop-blur-sm">
+        className={`${myNavbarFont.variable} antialiased bg-fixed bg-cover bg-center`}
+        style={{ backgroundImage: "url('/parchment2.png')", backgroundAttachment: 'fixed', minHeight: '100vh' }}>
         <Navbar />
           {children}
-        </div>
       </body>
     </html>
   );
