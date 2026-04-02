@@ -1,24 +1,31 @@
+@import "tailwindcss";
+
+/* 1. Keep your Font Declarations at the top */
 @font-face {
   font-family: 'MyCustomFont';
   src: url('/fonts/Aquifer.otf') format('opentype');
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'NavbarFont';
   src: url('/fonts/AlikeAngular-Regular.ttf') format('truetype');
+  font-display: swap;
 }
-
-@import "tailwindcss";
 
 :root {
   --background: #ffffff;
   --foreground: #171717;
 }
 
+/* 2. Update the Theme block (Tailwind v4 style) */
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-
+  
+  /* This creates 'font-main' and 'font-navbar' utility classes */
+  --font-main: "MyCustomFont", sans-serif;
+  --font-nav: "NavbarFont", sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -28,17 +35,25 @@
   }
 }
 
-* {
-  font-family: 'MyCustomFont', sans-serif;
-  font-weight: 400;
-  text-shadow: 0 0 0.4px currentColor;
-}
-
-.nav-link {
-  font-family: 'NavbarFont', sans-serif;
-}
-
+/* 3. Global Styles */
 body {
   background: var(--background);
   color: var(--foreground);
+  /* Apply your main custom font to the whole body */
+  font-family: var(--font-main);
+}
+
+/* Apply the navbar font specifically to nav links */
+.nav-link {
+  font-family: var(--font-nav);
+  color: #678fbf;
+}
+
+.nav-link:hover {
+  color: white;
+}
+
+* {
+  font-weight: 400;
+  text-shadow: 0 0 0.4px currentColor;
 }
