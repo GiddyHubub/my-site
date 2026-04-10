@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-/* 1. Keep your Font Declarations at the top */
+/* 1. Font Declarations, Keep at the top */
 @font-face {
   font-family: 'MyCustomFont';
   src: url('/fonts/Aquifer.otf') format('opentype');
@@ -18,7 +18,7 @@
   --foreground: #171717;
 }
 
-/* 2. Update the Theme block (Tailwind v4 style) */
+/* 2. Theme block (Tailwind v4 style) */
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -41,19 +41,58 @@ body {
   color: var(--foreground);
   /* Apply your main custom font to the whole body */
   font-family: var(--font-main);
+  color: #3b4457;
+
+/* --- Line height, Letter Kerning, Word Spacing --- */
+  line-height: 1.85;            /* Standard line spacing */
+  letter-spacing: 0.3px;        /* Precise kerning */
+  word-spacing: 1px;        /* Precise word spacing */
+  /* ---------------------------------------- */
 }
 
-/* Apply the navbar font specifically to nav links */
+
+
+/* Base style for nav-links (Mobile, Phablet, and Tablet) */
 .nav-link {
   font-family: var(--font-nav);
-  color: #678fbf;
+  color: #6986be;
+  transition: color 0.1s ease; /* Makes the color swap feel smooth */
+  font-size: 23px;
+/* Desktop Only: Add the vertical stretch and display properties */
+@media (min-width: 1025px) {
+  .nav-link {
+    display: inline-block;       /* Only apply on desktop */
+    transform: scaleY(1.1);      /* Only stretch on desktop */
+    transform-origin: bottom;
+      font-weight: 200;
+  -webkit-text-stroke: 0.2px #6986be;
+  letter-spacing: 0.3px; 
+  word-spacing: normal;
+  }
+}
 }
 
 .nav-link:hover {
-  color: white;
+  /* Using !important ensures it wins against other utility classes */
+  color: #84b4e5 !important;
 }
 
 * {
   font-weight: 400;
   text-shadow: 0 0 0.4px currentColor;
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-slide-text {
+  animation: slideInRight 0.5s ease-out forwards;
 }

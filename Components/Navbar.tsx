@@ -11,7 +11,7 @@ function MobileMenu() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="md:hidden"> 
+    <div className="lg:hidden"> 
       <button 
         onClick={() => setIsOpen(!isOpen)}
         className="fixed top-5 right-5 z-[150] p-3 rounded-full bg-[#6174a1] text-white shadow-lg"
@@ -39,8 +39,10 @@ function MobileMenu() {
             >
               <nav className="flex flex-col gap-6 mt-10">
                 <Link href="/" onClick={() => setIsOpen(false)} className="text-xl font-semibold">Home</Link>
-                <Link href="/services" onClick={() => setIsOpen(false)} className="text-xl font-semibold">Services</Link>
                 <Link href="/about" onClick={() => setIsOpen(false)} className="text-xl font-semibold">About</Link>
+                <Link href="/services" onClick={() => setIsOpen(false)} className="text-xl font-semibold">Services</Link>
+                <Link href="/schedule" onClick={() => setIsOpen(false)} className="text-xl font-semibold">Schedule</Link>
+                <Link href="/shop" onClick={() => setIsOpen(false)} className="text-xl font-semibold">Shop</Link>
                 <Link href="/contact" onClick={() => setIsOpen(false)} className="text-xl font-semibold">Contact</Link>
               </nav>
             </motion.div>
@@ -67,7 +69,7 @@ export default function Navbar() {
     >
 
 {/* 1. MOBILE LOGO: Positioned Top-Left */}
-        <div className="md:hidden absolute top-1 left-3.5 z-20">
+        <div className="lg:hidden absolute top-1 left-3.5 z-20">
            <Image 
              src="/healingka_logo.png" 
              alt="Mobile Logo" 
@@ -80,12 +82,12 @@ export default function Navbar() {
 
       {/* White Overlay --Hidden on Mobile */}
       <div 
-        className="absolute hidden md:block"
+        className="absolute hidden lg:block"
         style={{ 
           backgroundColor: 'rgba(255, 255, 255, 0.35)',
           width: '100%',
-          maxWidth: '700px',
-          height: '30px',
+          maxWidth: '1025px',
+          height: '40px',
           left: '50%',
           bottom: '6px',
           transform: 'translateX(-50%)',
@@ -97,9 +99,9 @@ export default function Navbar() {
       {/* Links Container */}
       <div className="flex justify-center items-end gap-4 relative z-10">
         {/* Left Links --Added hidden md:inline-block to hide on Mobile */}
-        <Link href="/home" className="hidden md:inline-block hover:text-white nav-link tracking-wide pb-2 -mr-1">Home</Link>
-        <Link href="/about" className="hidden md:inline-block hover:text-white nav-link tracking-wide pb-2 -mr-1" style={{ paddingLeft: '25px' }}>About</Link>
-        <Link href="/services" className="hidden md:inline-block hover:text-white nav-link tracking-wide pb-2 -mr-25" style={{ paddingLeft: '25px', zIndex: 10 }}>Services</Link>
+        <Link href="/home" className="hidden lg:inline-block nav-link tracking-wide pb-0.5 -mr-1">Home</Link>
+        <Link href="/about" className="hidden lg:inline-block nav-link tracking-wide pb-0.5 -mr-1" style={{ paddingLeft: '25px' }}>About</Link>
+        <Link href="/services" className="hidden lg:inline-block nav-link tracking-wide pb-0.5 -mr-25" style={{ paddingLeft: '25px', zIndex: 10 }}>Services</Link>
         
         {/* Center Logo Container */}
         <div className="flex flex-col items-center gap-2 px-0 pb-4 md:pb-0">
@@ -112,21 +114,21 @@ export default function Navbar() {
             className="object-contain"
             style={{ maxWidth: 'min(80vw, 250px)', maxHeight: '150px' }}
           />
-          {/* Hidden Heart Logo on Mobile, Visible on Desktop */}
+          {/* Hidden Heart Logo on Mobile, Visible Center Heart Logo on Desktop */}
           <Image 
             src="/healingka_logo.png" 
             alt="Logo" 
             width={65} 
             height={55}
-            className="object-contain hidden md:block"
+            className="object-contain hidden lg:block"
             style={{ maxWidth: '300px', maxHeight: '70px' }}
           />
         </div>
         
         {/* Right Links --Added hidden md:inline-block to hide on Mobile*/}
-        <Link href="/schedule" className="hidden md:inline-block hover:text-white nav-link tracking-wide pb-2 -ml-25" style={{ paddingRight: '25px' }}>Schedule</Link>
-        <Link href="/shop" className="hidden md:inline-block hover:text-white nav-link tracking-wide pb-2 -ml-1" style={{ paddingRight: '25px' }}>Shop</Link>
-        <Link href="/contact" className="hidden md:inline-block hover:text-white nav-link tracking-wide pb-2 -ml-1">Contact</Link>
+        <Link href="/schedule" className="hidden lg:inline-block nav-link tracking-wide pb-0.5 -ml-25" style={{ paddingRight: '25px' }}>Schedule</Link>
+        <Link href="/shop" className="hidden lg:inline-block nav-link tracking-wide pb-0.5 -ml-1" style={{ paddingRight: '25px' }}>Shop</Link>
+        <Link href="/contact" className="hidden lg:inline-block nav-link tracking-wide pb-0.5 -ml-1">Contact</Link>
         </div>
     </nav>
 
