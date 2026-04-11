@@ -22,7 +22,6 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  
   /* This creates 'font-main' and 'font-navbar' utility classes */
   --font-main: "MyCustomFont", sans-serif;
   --font-nav: "NavbarFont", sans-serif;
@@ -35,30 +34,47 @@
   }
 }
 
-/* 3. Global Styles */
-body {
-  background: var(--background);
-  color: var(--foreground);
-  /* Apply your main custom font to the whole body */
-  font-family: var(--font-main);
-  color: #3b4457;
+/* --- GLOBAL TYPOGRAPHY --- */
 
-/* --- Line height, Letter Kerning, Word Spacing --- */
-  line-height: 1.85;            /* Standard line spacing */
-  letter-spacing: 0.3px;        /* Precise kerning */
-  word-spacing: 1px;        /* Precise word spacing */
-  /* ---------------------------------------- */
+/* 1. Mobile & Tablet Defaults (Under 1025px) */
+body {
+  font-size: 14px; /* Base body text */
+  line-height: 1.85;
+  letter-spacing: 0.3px;
+  word-spacing: 0.8px;
+  background: var(--background);
+  color: #3b4457;
+  font-family: var(--font-main);
+}
+
+h1, h2, h3 {
+  /* Matches Tailwind's 'text-3xl' */
+  font-size: 30px; 
+  line-height: 36px;
+}
+
+/* 2. Desktop Defaults (1025px and up) */
+@media (min-width: 1025px) {
+  body {
+    font-size: 23px; /* Desktop Text Size */
+  }
+
+  h1, h2, h3 {
+    /* Matches Tailwind's 'text-4xl' */
+    font-size: 36px;
+    line-height: 40px;
+  }
 }
 
 
-
-/* Base style for nav-links (Mobile, Phablet, and Tablet) */
+/* Nav Links */
 .nav-link {
   font-family: var(--font-nav);
   color: #6986be;
-  transition: color 0.1s ease; /* Makes the color swap feel smooth */
+  transition: color 0.1s ease;
   font-size: 23px;
-/* Desktop Only: Add the vertical stretch and display properties */
+}
+/* Desktop Only Navbar Behavior */
 @media (min-width: 1025px) {
   .nav-link {
     display: inline-block;       /* Only apply on desktop */
@@ -69,7 +85,6 @@ body {
   letter-spacing: 0.3px; 
   word-spacing: normal;
   }
-}
 }
 
 .nav-link:hover {
@@ -83,14 +98,8 @@ body {
 }
 
 @keyframes slideInRight {
-  from {
-    opacity: 0;
-    transform: translateX(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
+  from { opacity: 0; transform: translateX(20px); }
+  to { opacity: 1; transform: translateX(0); }
 }
 
 .animate-slide-text {

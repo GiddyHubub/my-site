@@ -86,7 +86,7 @@ export default function Navbar() {
         style={{ 
           backgroundColor: 'rgba(255, 255, 255, 0.35)',
           width: '100%',
-          maxWidth: '1025px',
+          maxWidth: '1000px',
           height: '40px',
           left: '50%',
           bottom: '6px',
@@ -97,14 +97,14 @@ export default function Navbar() {
       />
       
       {/* Links Container */}
-      <div className="flex justify-center items-end gap-4 relative z-10">
-        {/* Left Links --Added hidden md:inline-block to hide on Mobile */}
+      <div className="flex justify-center items-end gap-10 relative z-10">
+        {/* Left Links --Added hidden lg:inline-block to hide on Mobile */}
         <Link href="/home" className="hidden lg:inline-block nav-link tracking-wide pb-0.5 -mr-1">Home</Link>
         <Link href="/about" className="hidden lg:inline-block nav-link tracking-wide pb-0.5 -mr-1" style={{ paddingLeft: '25px' }}>About</Link>
         <Link href="/services" className="hidden lg:inline-block nav-link tracking-wide pb-0.5 -mr-25" style={{ paddingLeft: '25px', zIndex: 10 }}>Services</Link>
         
         {/* Center Logo Container */}
-        <div className="flex flex-col items-center gap-2 px-0 pb-4 md:pb-0">
+        <div className="flex flex-col items-center gap-2 px-0 pb-4 lg:pb-0">
           {/* Always Visible Text Logo */}
           <Image  
             src="/healingka2.png" 
@@ -125,7 +125,7 @@ export default function Navbar() {
           />
         </div>
         
-        {/* Right Links --Added hidden md:inline-block to hide on Mobile*/}
+        {/* Right Links --Added hidden lg:inline-block to hide on Mobile*/}
         <Link href="/schedule" className="hidden lg:inline-block nav-link tracking-wide pb-0.5 -ml-25" style={{ paddingRight: '25px' }}>Schedule</Link>
         <Link href="/shop" className="hidden lg:inline-block nav-link tracking-wide pb-0.5 -ml-1" style={{ paddingRight: '25px' }}>Shop</Link>
         <Link href="/contact" className="hidden lg:inline-block nav-link tracking-wide pb-0.5 -ml-1">Contact</Link>
