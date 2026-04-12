@@ -117,7 +117,7 @@ useEffect(() => {
                     
       {/* Testimonial Body Text */}
       {/* NEW: Custom Title Header */}
-  <h2 className="inline-block font-black text-[#4170c1] text-xl sm:text-2xl lg:text-3xl -skew-x-[12deg] !leading-[1.3] tracking-tighter [word-spacing:-0.1em] text-center mb-6">
+  <h2 className="inline-block font-black text-[#4170c1] text-xl sm:text-2xl lg:text-3xl -skew-x-[12deg] !leading-[1.3] tracking-tight [word-spacing:-0.1em] text-center mb-6">
     {testimonials[currentIndex].title}
   </h2>
   {/* Spacing under Title is 'mb-6', Dynamic Line Clamp for Mobile-Desktop*/}

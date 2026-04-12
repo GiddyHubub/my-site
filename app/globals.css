@@ -38,7 +38,7 @@
 
 /* 1. Mobile & Tablet Defaults (Under 1025px) */
 body {
-  font-size: 14px; /* Base body text */
+  font-size: 18px; /* Base body text */
   line-height: 1.85;
   letter-spacing: 0.3px;
   word-spacing: 0.8px;
@@ -48,7 +48,7 @@ body {
 }
 
 h1, h2, h3 {
-  /* Matches Tailwind's 'text-3xl' */
+  /* Mobile Headers 1, 2, 3 (Title Text) */
   font-size: 30px; 
   line-height: 36px;
 }
@@ -60,7 +60,7 @@ h1, h2, h3 {
   }
 
   h1, h2, h3 {
-    /* Matches Tailwind's 'text-4xl' */
+    /* Desktop Headers 1, 2, 3 (Title Text) */
     font-size: 36px;
     line-height: 40px;
   }

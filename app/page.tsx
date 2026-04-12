@@ -1,7 +1,9 @@
 import Carousel from "@/Components/Carousel";
+import ServicesCards from "@/Components/ServicesCards";
 
 export default function Home() {
   return (
+    
     <main className="w-full flex flex-col">
       {/* 1. Banner Image*/}
       <section className="w-full">
@@ -146,13 +148,20 @@ deep healing to restore balance to all the parts of you.
 {/* --- Empty Break End --- */}
 
 
+{/* 5. Geode Services Section */}
+<section className="w-full relative"> 
+  {/* The Background Image Layer */}
+  <div className="w-full h-[750px] lg:h-[750px] overflow-hidden border-y-2 border-[#6174a1] shadow-[0_8px_10px_-1px_rgba(60,40,0,0.55)]">
+    <img 
+      alt="geodebg" 
+      className="object-cover -scale-x-100 object-center h-full w-full" 
+      src="/geodebg.jpg" 
+    />
+  </div>
+  {/* THE COMPONENT (Floating on top) */}
+  <ServicesCards />
+</section>
 
-      {/* 5. Geode Services Section */}
-      <div className="w-full relative z-10">
-        <div className="w-full h-185 sm:h-185 lg:h-185 overflow-hidden border-2 border-[#6174a1] shadow-[0_8px_10px_-1px_rgba(60,40,0,0.55)]">
-          <img alt="geodebg" className="object-cover -scale-x-100 object-center h-full w-full" src="/geodebg.jpg" />
-        </div>
-      </div>
 
 
 {/* --- Empty Break Start --- */}
