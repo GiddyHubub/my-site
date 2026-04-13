@@ -38,7 +38,7 @@
 
 /* 1. Mobile & Tablet Defaults (Under 1025px) */
 body {
-  font-size: 18px; /* Base body text */
+  font-size: 16px; /* Base body text */
   line-height: 1.85;
   letter-spacing: 0.3px;
   word-spacing: 0.8px;
@@ -57,12 +57,19 @@ h1, h2, h3 {
 @media (min-width: 1025px) {
   body {
     font-size: 23px; /* Desktop Text Size */
+    line-height: 1.5 !important;
+    letter-spacing: 0.3px;
+    word-spacing: 0.8px;
+    background: var(--background);
+    color: #3b4457;
+    font-family: var(--font-main);
   }
 
   h1, h2, h3 {
     /* Desktop Headers 1, 2, 3 (Title Text) */
     font-size: 36px;
     line-height: 40px;
+    line-height: 1.5 !important;
   }
 }
 
